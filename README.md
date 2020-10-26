@@ -3,7 +3,7 @@ code for cipher block with digital signature
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include<string.h>
  typedef struct node
 {
 char data;
@@ -152,4 +152,5 @@ printf ("\ndata is being sent \n\n ");
     {
 printf ("\n invalid data\n");
     }
+    
 }
