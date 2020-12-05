@@ -23,7 +23,7 @@ node * createLinkedList (int n);
 
 point * ForKey ();
 
-void displaykey (int);
+void displaykey (long);
 
 void displayList (node * head);
 
@@ -65,14 +65,14 @@ node * createLinkedList (int n)
 int i = 0;
 
 char sol[20];
-int d, e, m1, a, n1, p2, q2, t2[100], pub, t3, k1 = 0;
-
+int  e, m1, a, n1, p2, q2, t2[100], pub, t3, k1 = 0;
+long d;
 
 node * head = NULL;	//for the first node
   node *temp = NULL;		//for the next node
   node *p = NULL;		// for iteration
 
-printf("\n//////////////////////////////////////////////RSA\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n");
+printf("\n//////////////////////////////////////////////>>>>>>>>>>>>>>>>RSA<<<<<<<<<<<<<<<<<<\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n");
 printf ("\nEnter the first prime number\n ");
 scanf ("%d", &p2);
 
@@ -113,9 +113,9 @@ printf("\nK1 value should be small and should be odd");
 scanf ("%d", &k1);
 int k2;
 k2=k1%2;
-if(k1>0&&k1<=100&&k2!=0)
+if(k1>0 && k1<=100 &&k2!=0)
 {
-d = (k1 * (m1 + 1) / e);
+d = (k1*(m1 + 1)/e);
 
 printf ("\nprivate key %d", d);
 }
@@ -207,19 +207,6 @@ p = p->next;
     }
 
 }
-void displayList1 (node * head)
-{
-node * p = head;
-while (p != NULL)
-
-
-    {
-
-printf ("%c", p->data);
-p = p->next;
-    }
-
-}
 void check_prime (int x, int y)
 {
 
@@ -295,7 +282,7 @@ return m;
 
 }
 
-void displaykey (int d1)
+void displaykey (long d1)
 {
 node * r;
 r = (point *) malloc (sizeof (point));
@@ -310,10 +297,10 @@ if (r->data == d1)
 printf ("\nthe key is valid \n");
 
 
-}
+    }
   else
     {
 printf ("\n invalid data\n");
-
+end();
     }
 }
