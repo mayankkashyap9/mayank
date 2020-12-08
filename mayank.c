@@ -1,6 +1,7 @@
+
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+
 #include<math.h>
 typedef struct node
 {
@@ -36,10 +37,7 @@ int main ()
 int n = 0;
 
 
-
-
-
-printf ("\n number of alphabets to be sent\n");
+printf ("\n number of messages to be sent\n");
 scanf ("%d", &n);
 
 
@@ -72,7 +70,7 @@ node * head = NULL;	//for the first node
   node *temp = NULL;		//for the next node
   node *p = NULL;		// for iteration
 
-printf("\n//////////////////////////////////////////////>>>>>>>>>>>>>>>>RSA<<<<<<<<<<<<<<<<<<\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n");
+printf("\n                                         *******************RSA alog-1*******************");
 printf ("\nEnter the first prime number\n ");
 scanf ("%d", &p2);
 
@@ -86,7 +84,7 @@ m1 = (p2 - 1) * (q2 - 1);
 
 printf ("\ne=%d\n", m1);
 
-printf ("\nchoose a number between 1 and %d \n", m1);
+printf ("\n choose a number between 1 and %d \n", m1);
 scanf ("%d", &e);
 if(e>1&& e<m1)
 {
@@ -102,12 +100,12 @@ t3 = t3 + t2[i];
 
 pub = pow (t3, e);
 pub = (pub) % n1;
-printf ("\npublic key is %d\n", pub);
+printf ("\n public key is %d\n", pub);
 
 printf ("\n generating  private key with the help of RSA \n");
 
-printf ("\nchoose the value of K1 for generating private key\n");
-printf("\nK1 value should be small and should be odd");
+printf ("\n choose the value of K1 for generating private key\n");
+printf("\n K1 value should be small and should be odd");
 
 
 scanf ("%d", &k1);
@@ -117,7 +115,8 @@ if(k1>0 && k1<=100 &&k2!=0)
 {
 d = (k1*(m1 + 1)/e);
 
-printf ("\nprivate key %d", d);
+printf ("\n                                                 *********private key*********\n ");
+printf("\n                                                             %d\n",d);
 }
 else{end();}
 displaykey (d);
@@ -304,3 +303,4 @@ printf ("\n invalid data\n");
 end();
     }
 }
+            
